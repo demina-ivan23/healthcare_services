@@ -171,22 +171,15 @@ body {
   z-index: 0;
 }
 .main .hero__content__header {
-  width: 80%;
+  width: 100%;
   display: flex;
-  justify-content: space-between;
-  margin: 5% 10%;
+  margin: 5% 12%;
 }
-@media screen and (max-width: 450px) {
-  .main .hero__content__header {
-    margin: 5% 5%;
-    width: 90%;
-  }
-}
-@media screen and (max-width: 400px) {
-  .main .hero__content__header {
-    margin: 5% 3%;
-    width: 95%;
-  }
+.main .hero__content__header .hidden {
+  height: 0;
+  opacity: 0;
+  width: 0;
+  overflow: hidden;
 }
 .main .hero__content__header__logo-container {
   display: flex;
@@ -207,7 +200,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 45%;
+  width: 40%;
+  margin-left: 20%;
 }
 .main .hero__content__header__navbar__element__link {
   text-decoration: none;
@@ -222,29 +216,126 @@ body {
   color: var(--secondary-color-dark-hover);
   border-bottom: 2.5px solid var(--secondary-color-dark-hover);
 }
-@media screen and (max-width: 1100px) {
-  .main .hero__content__header__navbar {
-    width: 50%;
-  }
-}
 @media screen and (max-width: 900px) {
   .main .hero__content__header__navbar {
-    width: 55%;
+    width: 45%;
+    margin-left: 15%;
   }
 }
-@media screen and (max-width: 700px) {
-  .main .hero__content__header__navbar {
-    width: 60%;
-  }
+.main .hero__content__header__menu-button {
+  height: 40px;
+  width: 6%;
+  position: absolute;
+  top: -3%;
+  right: 10%;
 }
-@media screen and (max-width: 600px) {
-  .main .hero__content__header__navbar {
-    width: 70%;
-  }
+.main .hero__content__header__menu-button span {
+  height: 5%;
+  width: 100%;
+  background-color: var(--primary-color);
+  border-radius: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.main .hero__content__header__menu-button span:nth-child(1) {
+  top: 25%;
+}
+.main .hero__content__header__menu-button span:nth-child(3) {
+  top: 75%;
 }
 @media screen and (max-width: 500px) {
-  .main .hero__content__header__navbar {
-    width: 75%;
+  .main .hero__content__header__menu-button {
+    height: 35px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .main .hero__content__header__menu-button {
+    height: 30px;
+  }
+}
+.main .hero__content__header__burger-menu {
+  position: fixed;
+  background-color: #ebebeb;
+  z-index: 98;
+  top: 0%;
+  right: 0;
+  width: 100%;
+  height: 9%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+  opacity: 1;
+  transition: all 0.3s ease;
+  padding-left: 5%;
+}
+.main .hero__content__header__burger-menu__element__link {
+  text-decoration: none;
+  font-size: var(--18-font-size);
+  font-weight: 400;
+  color: var(--primary-color);
+  padding-bottom: 1em;
+  transition: all 0.1s;
+}
+.main .hero__content__header__burger-menu__element__link:hover {
+  font-weight: 600;
+  color: var(--secondary-color-dark-hover);
+  border-bottom: 2.5px solid var(--secondary-color-dark-hover);
+}
+.main .hero__content__header__burger-menu__cross-container {
+  margin-left: 8%;
+  width: 10%;
+  height: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main .hero__content__header__burger-menu__cross-container__cross {
+  height: 70%;
+  width: 70%;
+  position: relative;
+}
+.main .hero__content__header__burger-menu__cross-container__cross span {
+  height: 5%;
+  width: 60%;
+  background-color: var(--primary-color);
+  border-radius: 20px;
+  position: absolute;
+  top: 48%;
+  left: 21%;
+  transform: translate(-50%, -50%);
+}
+.main .hero__content__header__burger-menu__cross-container__cross span:nth-child(1) {
+  transform: rotate(-45deg);
+}
+.main .hero__content__header__burger-menu__cross-container__cross span:nth-child(2) {
+  transform: rotate(45deg);
+}
+.main .hero__content__header__burger-menu.hidden {
+  opacity: 1;
+  width: 100%;
+  overflow: hidden;
+}
+@media screen and (max-height: 650px) {
+  .main .hero__content__header__burger-menu {
+    height: 10%;
+  }
+}
+@media screen and (max-height: 550px) {
+  .main .hero__content__header__burger-menu {
+    height: 12%;
+  }
+}
+@media screen and (max-height: 460px) {
+  .main .hero__content__header__burger-menu {
+    height: 15%;
+  }
+}
+@media screen and (max-height: 360px) {
+  .main .hero__content__header__burger-menu {
+    height: 20%;
   }
 }
 .main .hero__content__main {
