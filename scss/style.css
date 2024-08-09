@@ -568,7 +568,7 @@ body {
 .main .feature-1__content__right__button-container {
   margin-top: 8%;
 }
-.main .feature-1__content__right__button-container .--secondary-button {
+.main .feature-1__content__right__button-container .secondary-button {
   padding: 2.5% 9%;
 }
 @media screen and (max-width: 800px) {
@@ -633,7 +633,7 @@ body {
 .main .feature-2__content__left__button-container {
   margin-top: 8%;
 }
-.main .feature-2__content__left__button-container .--secondary-button {
+.main .feature-2__content__left__button-container .secondary-button {
   padding: 2.5% 9%;
 }
 @media screen and (max-width: 800px) {
@@ -721,7 +721,7 @@ body {
 .main .feature-3__content__right__button-container {
   margin-top: 8%;
 }
-.main .feature-3__content__right__button-container .--secondary-button {
+.main .feature-3__content__right__button-container .secondary-button {
   padding: 3% 13%;
 }
 @media screen and (max-width: 800px) {
