@@ -173,7 +173,12 @@ body {
 .main .hero__content__header {
   width: 100%;
   display: flex;
-  margin: 5% 12%;
+  margin: 3% 10%;
+}
+@media screen and (max-width: 700px) {
+  .main .hero__content__header {
+    margin: 5% 10%;
+  }
 }
 .main .hero__content__header .hidden {
   height: 0;
