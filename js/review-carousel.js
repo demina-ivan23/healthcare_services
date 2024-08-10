@@ -36,7 +36,8 @@ export const listenToCarouselNavigation = () => {
         console.log(activeSlide);
         activeSlide.classList.add('active');
         sessionStorage.setItem('activeCarouselSlide', `#${activeSlide.id}`);
-
+        let moveBy = activeSlide.style.left;
+        track.style.transform = 'translateX(-' + moveBy + ')';
         document.querySelector('.review-card-indicator.active')?.classList.remove('active');
         const newActiveIndicator = Array.from(indicators).find(indicator => indicator.slideId === activeSlide.id);
         newActiveIndicator.classList.add('active');
@@ -46,25 +47,16 @@ export const listenToCarouselNavigation = () => {
         let currentSlide = getActiveSlide();
         let prevSlide = currentSlide.previousElementSibling ?? track.lastElementChild;
         setActiveSlide(prevSlide);
-        const moveBy = prevSlide.style.left;
-        track.style.transform = 'translateX(-' + moveBy + ')';
-        console.log(prevSlide);
     }
     const toNextSlide = () => {
         let currentSlide = getActiveSlide();
         let nextSlide = currentSlide.nextElementSibling ?? track.firstElementChild;
         setActiveSlide(nextSlide);
-        const moveBy = nextSlide.style.left;
-        track.style.transform = 'translateX(-' + moveBy + ')';
-        console.log(currentSlide, nextSlide);
     }
     const toSlideByIndicator = (target) => {
         let currentSlide = getActiveSlide();
         let slideToJumpTo =  track.querySelector('#' + target.slideId);
         setActiveSlide(slideToJumpTo);
-        const moveBy = slideToJumpTo.style.left;
-        track.style.transform = 'translateX(-' + moveBy + ')';
-        console.log(target.slideId);
     }
     //add ids to elements
     addIdsToElements();
