@@ -1,13 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap");
 :root {
-  --primary-color: #3c567b;
-  --secondary-color-dark: #1f153481;
-  --secondary-color-dark-hover: #2e4e92;
-  --secondary-color-light: #ccd2e9;
-  --accent-color: #93c1f9;
-  --button-color: #458ff6;
-  --card-text-small-color: #7d7987;
-  --heading-color: #462e6a;
   --heading-h1-font-size: 48px;
   --heading-h2-font-size: 36px;
   --heading-h3-font-size: 24px;
@@ -119,8 +111,167 @@ body {
 }
 
 .main {
+  position: absolute;
+  top: 0;
+  --primary-color: #3c567b;
+  --secondary-color-dark: #1b122f81;
+  --secondary-color-dark-hover: #2e4e92;
+  --secondary-color-light: #ccd2e9;
+  --accent-color: #93c1f9;
+  --button-color: #458ff6;
+  --card-text-small-color: #7d7987;
+  --heading-color: #462e6a;
+  --background-color: #ffffff;
+  --text-color: #000000;
   font-family: "Mulish", sans-serif;
-  background-color: #ffffff;
+  background-color: var(--background-color);
+}
+.main #registerAlertContainer {
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(17, 17, 18, 0.6823529412);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease;
+}
+.main #registerAlertContainer.hidden {
+  overflow: hidden;
+  z-index: -1;
+  opacity: 0;
+  transition: 0.5s ease;
+}
+.main #registerAlertContainer .register-alert {
+  position: relative;
+  width: 35%;
+  height: auto;
+  background-color: var(--background-color);
+  opacity: 1;
+  border: 2px solid var(--primary-color);
+  font-family: "Roboto", sans-serif;
+  border-radius: 30px;
+  color: var(--text-color);
+  overflow-y: scroll;
+  scrollbar-width: none;
+  padding: 1% 0;
+}
+@media screen and (max-height: 670px) {
+  .main #registerAlertContainer .register-alert {
+    height: 90%;
+  }
+}
+.main #registerAlertContainer .register-alert__content__header {
+  margin-top: 7%;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  font-size: var(--20-font-size);
+}
+.main #registerAlertContainer .register-alert__content__form {
+  margin-top: 5%;
+  margin-left: 10%;
+  display: flex;
+  flex-direction: column;
+  height: 90%;
+}
+.main #registerAlertContainer .register-alert__content__form__link-div {
+  display: flex;
+  justify-content: center;
+  font-size: var(--16-font-size);
+}
+.main #registerAlertContainer .register-alert__content__form__link-div__link {
+  margin-left: 1%;
+  color: var(--secondary-color-dark-hover);
+  transition: all 0.3s ease;
+}
+.main #registerAlertContainer .register-alert__content__form__link-div__link:hover {
+  color: var(--heading-color);
+}
+.main #registerAlertContainer .register-alert__content__form__inputs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.main #registerAlertContainer .register-alert__content__form__inputs__input-group {
+  margin-top: 5%;
+  display: flex;
+  flex-direction: column;
+}
+.main #registerAlertContainer .register-alert__content__form__inputs__input-group__label {
+  font-size: var(--18-font-size);
+}
+.main #registerAlertContainer .register-alert__content__form__inputs__input-group__input {
+  margin-top: 3%;
+  width: 85%;
+  padding: 3% 2%;
+  font-size: var(--16-font-size);
+  border-radius: 10px;
+  border: 1px solid var(--secondary-color-light);
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+.main #registerAlertContainer .register-alert__content__form__submit {
+  margin: 5% 10% 5% 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+.main #registerAlertContainer .register-alert__content__form__submit__input {
+  padding: 2.5% 7%;
+  font-size: var(--18-font-size);
+  border: 1px solid var(--button-color);
+  border-radius: 50px;
+  background-color: var(--button-color);
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+.main #registerAlertContainer .register-alert__content__form__submit__input:hover {
+  background-color: var(--background-color);
+  color: var(--button-color);
+}
+@media screen and (max-width: 1400px) {
+  .main #registerAlertContainer .register-alert {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .main #registerAlertContainer .register-alert {
+    width: 45%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .main #registerAlertContainer .register-alert {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .main #registerAlertContainer .register-alert {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .main #registerAlertContainer .register-alert {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .main #registerAlertContainer .register-alert {
+    width: 75%;
+  }
+}
+@media screen and (max-width: 450px) {
+  .main #registerAlertContainer .register-alert {
+    width: 75%;
+  }
+}
+@media screen and (max-width: 400px) {
+  .main #registerAlertContainer .register-alert {
+    width: 80%;
+  }
 }
 .main .primary-button {
   background-color: var(--button-color);
@@ -135,13 +286,13 @@ body {
   border: 2px solid var(--button-color);
 }
 .main .primary-button:hover {
-  background-color: #ffffff;
+  background-color: var(--background-color);
   color: var(--button-color);
   font-weight: 400;
   font-size: var(--18-font-size);
 }
 .main .secondary-button {
-  background-color: #ffffff;
+  background-color: var(--background-color);
   color: var(--button-color);
   font-family: "Mulish", sans-serif;
   font-weight: 400;
@@ -159,6 +310,8 @@ body {
   font-size: var(--18-font-size);
 }
 .main .hero {
+  padding: 0;
+  margin: 0;
   position: relative;
 }
 .main .hero__bg-element {
@@ -442,7 +595,7 @@ body {
 .main .offered-services__content__border-bottom {
   margin-top: 1.5%;
   width: 4%;
-  border-bottom: 3px solid #000000;
+  border-bottom: 3px solid var(--text-color);
   border-radius: 3px;
 }
 .main .offered-services__content__subtext {
@@ -471,7 +624,7 @@ body {
   grid-template-rows: 1fr 2fr;
   margin: 5%;
   padding: 5% 10%;
-  background-color: #ffffff;
+  background-color: var(--background-color);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
   justify-content: space-around;
@@ -503,6 +656,7 @@ body {
   margin-top: 10%;
   font-size: var(--heading-h3-font-size);
   font-weight: 600;
+  color: var(--text-color);
 }
 .main .offered-services__content__card-container .services-card__text-container__main-text {
   margin-top: 10%;
