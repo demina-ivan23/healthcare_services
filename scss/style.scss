@@ -130,6 +130,8 @@ body {
 .main {
 	position: absolute;
 	top: 0;
+	overflow-x: hidden;
+
 	--primary-color: #3c567b;
 	--secondary-color-dark: #1b122f81;
 	--secondary-color-dark-hover: #2e4e92;
