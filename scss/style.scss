@@ -170,8 +170,8 @@ body {
 		border: 2px solid var(--button-color);
 		border-radius: 50px;
 		padding: 1% 4%;
+		text-decoration: none;
 		transition: all 0.3s;
-
 		&:hover {
 			background-color: var(--button-color);
 			color: #ffffff;
@@ -244,6 +244,11 @@ body {
 							transition: all 0.1s;
 
 							&:hover {
+								font-weight: 600;
+								color: var(--secondary-color-dark-hover);
+								border-bottom: 2.5px solid var(--secondary-color-dark-hover);
+							}
+							&.active {
 								font-weight: 600;
 								color: var(--secondary-color-dark-hover);
 								border-bottom: 2.5px solid var(--secondary-color-dark-hover);
@@ -322,6 +327,11 @@ body {
 							transition: all 0.1s;
 
 							&:hover {
+								font-weight: 600;
+								color: var(--secondary-color-dark-hover);
+								border-bottom: 2.5px solid var(--secondary-color-dark-hover);
+							}
+							&.active {
 								font-weight: 600;
 								color: var(--secondary-color-dark-hover);
 								border-bottom: 2.5px solid var(--secondary-color-dark-hover);
@@ -567,6 +577,9 @@ body {
 				justify-content: center;
 				width: 100%;
 				margin-top: 5%;
+				.secondary-button{
+					padding: 1.4% 4.5%;
+				}
 			}
 		}
 	}
@@ -1036,7 +1049,6 @@ body {
 								overflow: hidden;
 							}
 
-							&.active {}
 						}
 					}
 				}
