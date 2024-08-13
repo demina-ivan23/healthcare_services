@@ -160,7 +160,7 @@ body {
   scrollbar-width: none;
   padding: 1% 0;
 }
-@media screen and (max-height: 670px) {
+@media screen and (max-height: 480px) {
   .main #registerAlertContainer .register-alert {
     height: 90%;
   }
